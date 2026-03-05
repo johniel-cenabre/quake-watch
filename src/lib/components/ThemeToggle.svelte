@@ -4,7 +4,7 @@
 
 <button
 	onclick={() => theme.toggle()}
-	class="p-2.5 rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md"
+	class="p-2 md:p-2.5 rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md"
 	aria-label="Toggle theme"
 	title="Toggle light/dark theme"
 >
@@ -12,7 +12,7 @@
 		{#if $theme === 'light'}
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="w-5 h-5 text-gray-700 dark:text-gray-300"
+				class="w-4 h-4 md:w-5 md:h-5 text-gray-700 dark:text-gray-300"
 				viewBox="0 0 24 24"
 				fill="none"
 				stroke="currentColor"
@@ -25,7 +25,7 @@
 		{:else}
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="w-5 h-5 text-yellow-400"
+				class="w-4 h-4 md:w-5 md:h-5 text-yellow-400"
 				viewBox="0 0 24 24"
 				fill="none"
 				stroke="currentColor"

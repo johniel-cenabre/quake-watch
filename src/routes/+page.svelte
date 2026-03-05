@@ -67,12 +67,14 @@
 	<header class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg px-4 sm:px-6 md:px-8 py-4 shadow-md flex justify-between items-center z-[1000] border-b border-gray-200 dark:border-gray-700">
 		<div>
 			<h1 class="m-0 text-xl sm:text-2xl md:text-3xl bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">🌍 Quake Watch</h1>
-			<p class="mt-1.5 mb-0 text-gray-600 dark:text-gray-300 text-[10px] sm:text-xs md:text-sm">Global Earthquake Monitoring System</p>
+			<p class="mt-3 mb-0 text-gray-600 dark:text-gray-300 text-[12px] sm:text-sm md:text-md">Global Earthquake Monitoring System</p>
 		</div>
-		<div class="flex items-center gap-3">
+		<div class="flex-1 md:flex md:justify-end items-center gap-3 md:gap-4 text-right">
 			<ThemeToggle />
-			<div class="w-2.5 h-2.5 rounded-full {connectionStatus === 'Connected' ? 'bg-green-500' : connectionStatus === 'Loading...' ? 'bg-yellow-500 animate-pulse' : 'bg-red-500 animate-pulse'}"></div>
-			<span class="text-xs text-gray-600 dark:text-gray-300 font-medium">{connectionStatus}</span>
+			<div class="flex items-center justify-end gap-3 mt-2 md:order-first">
+				<div class="w-2.5 h-2.5 rounded-full {connectionStatus === 'Connected' ? 'bg-green-500' : connectionStatus === 'Loading...' ? 'bg-yellow-500 animate-pulse' : 'bg-red-500 animate-pulse'}"></div>
+				<span class="text-xs text-gray-600 dark:text-gray-300 font-medium">{connectionStatus}</span>
+			</div>
 		</div>
 	</header>
 
