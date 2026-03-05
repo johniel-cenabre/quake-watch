@@ -130,16 +130,18 @@
 				try {
 					const marker = L.marker([earthquake.latitude, earthquake.longitude], { icon })
 						.addTo(currentMap)
-						.bindPopup(`
-							<div class="min-w-[200px] dark:text-gray-100">
-								<h3 class="m-0 mb-2.5" style="color: ${iconColor};">${earthquake.name || 'Earthquake Event'}</h3>
-								<p class="my-1.5 dark:text-gray-300"><strong>Magnitude:</strong> ${earthquake.magnitude.toFixed(1)}</p>
-								<p class="my-1.5 dark:text-gray-300"><strong>Category:</strong> ${earthquake.category}</p>
-								<p class="my-1.5 dark:text-gray-300"><strong>Depth:</strong> ${earthquake.depth.toFixed(1)} km</p>
-								<p class="my-1.5 dark:text-gray-300"><strong>Location:</strong> ${earthquake.latitude.toFixed(2)}°N, ${earthquake.longitude.toFixed(2)}°E</p>
-								<p class="my-1.5 text-sm text-gray-600 dark:text-gray-400">Last update: ${formattedDate}</p>
-							</div>
-						`);
+				.bindPopup(`
+					<div class="min-w-[200px] dark:text-gray-100">
+						<h3 class="m-0 mb-2.5" style="color: ${iconColor};">${earthquake.name || 'Earthquake Event'}</h3>
+						<p class="my-1.5 dark:text-gray-200"><strong>Magnitude:</strong> ${earthquake.magnitude.toFixed(1)}</p>
+						<p class="my-1.5 dark:text-gray-200"><strong>Category:</strong> ${earthquake.category}</p>
+						<p class="my-1.5 dark:text-gray-200"><strong>Depth:</strong> ${earthquake.depth.toFixed(1)} km</p>
+						<p class="my-1.5 dark:text-gray-200"><strong>Location:</strong> ${earthquake.latitude.toFixed(2)}°N, ${earthquake.longitude.toFixed(2)}°E</p>
+						<p class="my-1.5 text-sm text-gray-600 dark:text-gray-400">Last update: ${formattedDate}</p>
+					</div>
+				`, {
+					className: 'earthquake-popup'
+				});
 
 					// Add click handler to select earthquake
 					marker.on('click', () => {
